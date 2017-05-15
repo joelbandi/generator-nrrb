@@ -56,20 +56,25 @@ module.exports = class extends Generator {
       this.answers
     );
   }
+  gitignore() {
+    this.fs.copyTpl(
+      this.templatePath('gitignore'),
+      this.destinationPath('.gitignore'),
+    );
+  }
   otherRootFiles() {
     var fileList = [
       '.babelrc',
-      '.gitignore',
       'index.html',
       'LICENSE.MD',
       'webpack.config.js',
       'yarn.lock'
     ];
     fileList.map(file => {
-      this.fs.copyTpl(
+      this.log(this.templatePath(file));
+      this.fs.copy(
         this.templatePath(file),
-        this.destinationPath(file),
-        this.answers
+        this.destinationPath(file)
       );
     });
   }
