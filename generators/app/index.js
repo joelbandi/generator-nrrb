@@ -59,7 +59,7 @@ module.exports = class extends Generator {
   gitignore() {
     this.fs.copyTpl(
       this.templatePath('gitignore'),
-      this.destinationPath('.gitignore'),
+      this.destinationPath('.gitignore')
     );
   }
   otherRootFiles() {
