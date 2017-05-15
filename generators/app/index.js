@@ -33,16 +33,44 @@ module.exports = class extends Generator {
       },
       {
         type: 'confirm',
-        name: 'use-yarn',
+        name: 'use_yarn',
         message: 'Do you want to use yarn?',
-        default: false,
-        store: true
+        default: false
       }
-    ]).then((answers) => {
+    ]).then(answers => {
       this.answers = answers;
+      this.answers.depTool = this.answers.use_yarn ? 'yarn' : 'npm';
     });
   }
-  install() {
-    this.log(this.answers);
+  readme() {
+    this.fs.copyTpl(
+      this.templatePath('README.md'),
+      this.destinationPath('README.md'),
+      this.answers
+    );
+  }
+  packageJSON() {
+    this.fs.copyTpl(
+      this.templatePath('package.json'),
+      this.destinationPath('package.json'),
+      this.answers
+    );
+  }
+  otherRootFiles() {
+    var fileList = [
+      '.babelrc',
+      '.gitignore',
+      'index.html',
+      'LICENSE.MD',
+      'webpack.config.js',
+      'yarn.lock'
+    ];
+    fileList.map(file => {
+      this.fs.copyTpl(
+        this.templatePath(file),
+        this.destinationPath(file),
+        this.answers
+      );
+    });
   }
 };
