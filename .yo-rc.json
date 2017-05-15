@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "joelbandi",
+      "authorEmail": "joelvivekbandi@gmail.com",
+      "authorUrl": "joelbandi.github.io"
+    }
+  }
+}
