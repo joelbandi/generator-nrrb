@@ -15,6 +15,6 @@
 ### Building the application
 
 + `<%- depTool%> install`.
-+ `npm start` to run development server.
++ `npm run dev` to run development server.
 + Navigate to `localhost:8080`
 + `npm run build` when you want to create a production build in the `/dist` folder.

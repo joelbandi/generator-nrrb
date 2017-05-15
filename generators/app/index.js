@@ -73,4 +73,28 @@ module.exports = class extends Generator {
       );
     });
   }
+  srcFiles() {
+    this.fs.copy(
+      this.templatePath('src/**/*'),
+      this.destinationPath('src')
+    );
+  }
+  testFiles() {
+    this.fs.copy(
+      this.templatePath('test/**/*'),
+      this.destinationPath('test')
+    );
+  }
+  install() {
+    if (this.answers.use_yarn) {
+      this.yarnInstall();
+    } else {
+      this.npmInstall();
+    }
+  }
+  end() {
+    this.log(yosay(
+      'Goodbye and see you soon!'
+    ));
+  }
 };
