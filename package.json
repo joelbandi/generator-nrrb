@@ -46,9 +46,10 @@
     "extends": "xo-space",
     "env": {
       "jest": true,
-      "node": true
+      "node": true,
+      "mocha": true
     }
   },
-  "repository": "https://www.github.com/joelbandi/generator-nrrb",
+  "repository": "joelbandi/generator-nrrb",
   "license": "MIT"
 }

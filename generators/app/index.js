@@ -2,7 +2,6 @@
 const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
-const Promise = require('bluebird');
 
 module.exports = class extends Generator {
   initializing() {
