@@ -6,7 +6,7 @@
   "author": {
     "name": "joelbandi",
     "email": "joelvivekbandi@gmail.com",
-    "url": "joelbandi.github.io"
+    "url": "https://joelbandi.github.io/"
   },
   "files": [
     "generators"
@@ -49,6 +49,6 @@
       "node": true
     }
   },
-  "repository": "joelbandi/generator-nrrb",
+  "repository": "https://www.github.com/joelbandi/generator-nrrb",
   "license": "MIT"
 }
