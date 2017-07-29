@@ -23,7 +23,7 @@ describe('generator-nrrb', () => {
       'index.html',
       'LICENSE.MD',
       'package.json',
-      'README.MD',
+      'README.md',
       'webpack.config.js',
       'yarn.lock'
     ]);
